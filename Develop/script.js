@@ -36,15 +36,16 @@ $(function () {
     }
   })
 
+//Populate the hourblocks with locally stored data
   for (var i = 9; i < 18; i++){
     var thisHourBlock = '#hour-'+i;
     var savedInput = localStorage.getItem('hour-'+i);
     console.log(savedInput);
     $(thisHourBlock).find('.description').val(savedInput);
   }
-  // TODO: Add code to get any user input that was saved in localStorage and set
-  // the values of the corresponding textarea elements. HINT: How can the id
-  // attribute of each time-block be used to do this?
-  //
-  // TODO: Add code to display the current date in the header of the page.
+
+  //Sets the current date in the header of the page
+  var currentDay = dayjs();
+  console.log(currentDay.format('dddd, MMMM DD YYYY'))
+  $('#currentDay').text(currentDay.format('dddd, MMMM DD, YYYY'))
 });
