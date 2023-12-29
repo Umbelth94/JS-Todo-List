@@ -8,19 +8,17 @@ $(function () {
   var currentHour = dayjs().hour();
 
 
+//Button event listener to save id/input value pairs locally
+  $('.saveBtn').on('click', function() {
+    var timeBlockId = $(this).closest('.time-block').attr('id');
+    console.log(timeBlockId);
+    var timeBlockInput = $(this).closest('.time-block').find('.description').val();
+    console.log(timeBlockInput);
 
-  $('.saveBtn').on('click', ()=> {
-    console.log('saved');
+    localStorage.setItem(timeBlockId, timeBlockInput);
+    console.log('storage saved');
   })
-  // TODO: Add a listener for click events on the save button. This code should
-  // use the id in the containing time-block as a key to save the user input in
-  // local storage. HINT: What does `this` reference in the click listener
-  // function? How can DOM traversal be used to get the "hour-x" id of the
-  // time-block containing the button that was clicked? How might the id be
-  // useful when saving the description in local storage?
-  
-  
-  
+
  //Give each hour div a color based on the current time of day
   scheduleContainer.children().each(function (){
     //Get just the number from each div by slicing off the "hour-" part of the string and converting to a NUM
