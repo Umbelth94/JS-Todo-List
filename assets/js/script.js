@@ -1,5 +1,3 @@
-
-
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
@@ -36,7 +34,7 @@ $(function () {
     }
   })
 
-//Populate the hourblocks with locally stored data
+//Populate the hour divs with locally stored data
   for (var i = 9; i < 18; i++){
     var thisHourBlock = '#hour-'+i;
     var savedInput = localStorage.getItem('hour-'+i);
