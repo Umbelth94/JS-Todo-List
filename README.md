@@ -1,5 +1,6 @@
 # Javascript To-Do List
 
+Live Link:  https://umbelth94.github.io/JS-Todo-List/
 ## Description
 A simple app made from starter code that helps the user track tasks that they have to do throughout the day.  It keeps track of the current hour and colors the seperate sections based on hours past, present, and future to help you stay on top of deadlines.  The app also locally saves your data so that your tasks stay when the page is re-opened or refreshed.  The app was made to practice utilizing dayjs in addition to jquery to handle the DOM manipulation.  
 
