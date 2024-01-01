@@ -10,7 +10,6 @@ $(function () {
     localStorage.clear();
   }
 
-
 //Button event listener to save id/input value pairs locally
   $('.saveBtn').on('click', function() {
     var timeBlockId = $(this).closest('.time-block').attr('id');
